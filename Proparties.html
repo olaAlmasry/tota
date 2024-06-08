@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>العقارات</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        tr {
+            font-size: 18pt;
+        }
+
+        th {
+            background-color: blueviolet;
+        }
+
+        table {
+            direction: rtl;
+            width: 100%;
+            height: auto;
+            text-align: center;
+        }
+
+        img {
+            width: 200px;
+            height: 180px;
+            border: none;
+            border-radius: 15px;
+        }
+
+        button {
+            display: block;
+            border: none;
+            color: white;
+            background-color: blueviolet;
+            text-align: center;
+            padding: 10px;
+            border-radius: 15px;
+            margin-right: 120px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            padding: 20px;
+        }
+
+        #cart {
+            float: right;
+            width: 50%;
+        }
+
+        .button {
+            display: block;
+            border: none;
+            color: white;
+            background-color: blueviolet;
+            text-align: center;
+            padding: 10px;
+            border-radius: 15px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        #cartTable {
+            width: 100%;
+        }
+
+        #cartTable th,
+        #cartTable td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        #cartTable th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        #button_0,
+        #button_1,
+        #button_2,
+        #button_3,
+        #button_4,
+        #button_5,
+        #button_6,
+        #button_7,
+        #button_8,
+        #button_9{
+        font-size: 25px;
+        display: none;
+        }
+        #button_0.active,
+        #button_1.active,
+        #button_2.active,
+        #button_3.active,
+        #button_4.active,
+        #button_5.active,
+        #button_6.active,
+        #button_7.active,
+        #button_8.active,
+        #button_9.active{
+        display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>العقارات</h1><table border="1">
+        <tbody><tr>
+            <th>المدينة</th>
+            <th>التفاصيل</th>
+            <th>الايجار الشهري</th>
+            <th>اظهار التفاصيل</th>
+            <th>اختيار</th>
+        </tr>
+        <tr>
+            <td>دمشق </td>
+            <td>
+            <li> شقة غرفة وصالة مساحة 70 م</li>
+            </td>
+            <td>500,000 ل.س</td>
+                <td><button style="display: block; margin: auto;" class="button" onclick="changedata(0)">إظهار</button>
+                    <div id="button_0">
+                        <li>المنطقة : مساكن برزة </li>
+                        <li>اكساء سوبر ديلوكس </li>
+                        <li> يوجد لديها تراس </li>
+                         <li> الطابق الخامس </li>
+                        <img src="imges/s1.jpg">
+                        <img src="imges/s2.jpg">
+                    </div>
+                </td>
+        <td><input type="radio" value="
+        المحافظة: دمشق
+        شقة غرفة وصالة مساحة 70 متر
+        الإيجار الشهري: 500,000 ل.س
+        المنطقة: مساكن برزة
+        اكساء: سوبر ديلوكس
+        يوجد لديها تراس
+        الطابق الخامس" name="radioo"></td></tr> 
+        <tr>
+            <td>حمص</td>
+            <td>
+                <li>دكان مساحة 25 م</li>
+              
+            </td>
+            <td>250,000 ل.س</td>
+            <td><button style="display: block; margin: auto;" class="button" onclick="changedata(1)">إظهار</button>
+                <div id="button_1">
+                    <li>المنطقة :وادي الذهب </li>
+                    <img src="imges/q1.jpg">
+                </div></td>
+            <td><input type="radio" value="المحافظة: حمص
+                دكان مساحة 25 متر
+                الإيجار الشهري: 250,000 ل.س
+                المنطقة: وادي الذهب" name="radioo"></td>
+            
+        </tr>
+        <tr>
+            <td> ريف دمشق </td>
+            <td>
+               <li>صالة مناسبات  مساحة 200 م</li>
+        
+            </td>
+            <td>2,000,000 ل.س</td>
+            <td><button style="display: block; margin: auto;" class="button" onclick="changedata(2)">إظهار</button>
+                <div id="button_2">
+                    <li>المنطقة : حرستا </li>
+                    <li> تصلح للاعراس والاعزاء </li>
+                    <li>يوجد فيها حمامين </li>
+                    <li>اكساء سوبر ديلوكس ومفروشة </li>
+                    <img src="imges/y1.jpg">
+                    <img src="imges/y2.jpg">
+                    <img src="imges/y3.jpg">
+                </div></td><td><input type="radio" value="المحافظة: ريف دمشق
+                    صالة مناسبات مساحة 200 متر
+                    الإيجار الشهري: 2,000,000 ل.س
+                    المنطقة: حرستاتصلح للاعراس والاعزاء
+                    يوجد فيها حماميناكساء سوبر ديلوكس ومفروشة" name="radioo"></td>
+        </tr>
+        <tr>
+            <td>السويداء</td>
+            <td>
+                <li> محل مساحة 85 م</li>
+                
+            </td>
+            <td>1,500,000ل.س</td>
+            <td><button style="display: block; margin: auto;" class="button" onclick="changedata(3)">إظهار</button>
+                <div id="button_3">
+                    <li>المنطقة : عتيل </li>
+                    <li>يوجد  حمام </li>
+                    <li> يوجد مساحة صغيرة جانب المحل </li>
+                    <img src="imges/o1.jpg">
+                    <img src="imges/o2.jpg">
+                    <img src="imges/o3.jpg">
+                </div></td><td><input type="radio" value="المحافظة: السويداء
+                    محل مساحة 85 متر
+                    الإيجار الشهري: 1,500,000 ل.س
+                    المنطقة: عتيل
+                    يوجد حمام
+                    يوجد مساحة صغيرة جانب المحل" name="radioo"></td>
+        </tr>
+        <tr>
+            <td> حلب </td>
+            <td>
+            <li> شقة سكنية مساحة 180 م</li>
+            </td>
+            <td>1,500,000 ل.س</td>
+            <td><button style="display: block; margin: auto;" class="button" onclick="changedata(4)">إظهار</button>
+                <div id="button_4">
+                    <li>المنطقة : صلاح الدين </li><li>الشقة اكساء سوبر ديلوكس بطابع اندلسي </li>
+                    <li>الشقة غير مفروشة </li>
+                    <img src="imges/h1.jpg">
+                    <img src="imges/h2.jpg">
+                    <img src="imges/h3.jpg">
+                    <img src="imges/h4.jpg">    
+                </div></td><td><input type="radio" value="المحافظة: حلب
+                    شقة سكنية مساحة 180 متر
+                    الإيجار الشهري: 1,500,000 ل.س
+                    المنطقة: صلاح الدين
+                    الشقة اكساء سوبر ديلوكس بطابع اندلسي
+                    الشقة غير مفروشة" name="radioo"></td>
+        </tr>
+        <tr>
+            <td>طرطوس </td>
+            <td>
+                <li>شقة فارغة ثلاث غرف مساحة 100 م</li>
+                
+            </td>
+            <td>850,000ل.س</td>
+             <td><button style="display: block; margin: auto;" class="button" onclick="changedata(5)">إظهار</button>
+                <div id="button_5">
+                    <li>المنطقة : صافيتا </li>
+                    <li>اكساء ديلوكس </li>
+                    <li>يوجد لديها 2 بلكون مساحة  م10 </li>
+                    <li>الطابق الرابع </li>
+                    <img src="imges/k1.jpg">
+                    <img src="imges/k2.jpg">
+                    <img src="imges/k3.jpg">
+                </div></td><td><input type="radio" value="المحافظة: طرطوس
+                    شقة فرغة ثلاث غرف مساحة 100 متر 
+                    الإيجار الشهري: 850,000 ل.س
+                    المنطقة: صافيتا
+                    اكساء ديلوكس
+                    يوجد لديها 2 بلكون مساحة 10 متر
+                    الطابق الرابع" name="radioo"></td>
+        </tr>
+        <tr>
+            <td>ريف دمشق </td>
+            <td>
+            <li>فيلا مزرعة مساحة 1000 م</li>
+           
+            </td>
+            <td>30,000,000 ل.س</td>
+            <td><button style="display: block; margin: auto;" class="button" onclick="changedata(6)">إظهار</button>
+                <div id="button_6">
+                    <li>الموقع: طريق المطار الجسر الخامس بعد مطعم القرية</li>
+                    <li>مساحة المسبح 10*15</li>
+                    <li>الفيلا مؤلفة من طابقين </li>
+                    <li>كراج يسع الى حد اربع سيارات </li>
+                    <img src="imges/p1.jpg">
+                      <img src="imges/p2.jpg">
+                     <img src="imges/p3.jpg">
+                </div></td><td><input type="radio" value="المحافظة: ريف دمشق
+                    فيلا مزرعة مساحة 1000 متر
+                    الإيجار الشهري: 30,000,000 ل.س
+                    الموقع: طريق المطار الجسر الخامس بعد مطعم القرية
+                    مساحة المسبح 10*15" name="radioo"></td>
+        </tr>
+        <tr>
+            <td>دير الزور </td>
+            <td>
+                <li>منزل غرفتين وصالة مساحة 150 م</li>
+                
+            </td>
+            <td>650,000ل.س</td>
+                <td><button style="display: block; margin: auto;" class="button" onclick="changedata(7)">إظهار</button>
+                    <div id="button_7">
+                        <li>المنطقة : الميادين </li>
+                        <li>اكساء سوبر ديلوكس </li>
+                        <li>مفروشة فرش ممتاز </li>
+                        <li>مطبخ اميركي </li>
+                        <img src="imges/d1.jpg">
+                        <img src="imges/d2.jpg">
+                        <img src="imges/d3.jpg">
+                    </div></td><td><input type="radio" value="المحافظة: دير الزور
+                        منزل غرفتين ومصالة مساحة 150 متر
+                        الإيجار الشهري: 650,000 ل.س
+                        المنطقة: الميادين
+                        اكساء سوبب ديلوكس
+                        مفروشة فرش ممتاز
+                        مطبخ اميركي" name="radioo"></td>
+        </tr>
+        <tr>
+            <td> درعا </td>
+            <td>
+                <li>محل مساحة 50 م</li>
+                
+            </td>
+            <td>500,000 ل.س</td>
+            <td><button style="display: block; margin: auto;" class="button" onclick="changedata(8)">إظهار</button>
+                <div id="button_8"><li>المنطقة : كفر شمس </li>
+                    <li>  ملكية : طابو </li> 
+                    <li>اكساء سوبر ديلوكس</li>
+                    <img src="imges/z1.jpg">
+                </div></td>
+                <td><input type="radio" value="المحافظة: درعا
+                    محل مساحة 50 متر 
+                    الإيجار اشهري: 500,000 ل.س 
+                    المنطقة : كفر شمس
+                    ملكية: طابو
+                    اكساء سوبر ديلوكس" name="radioo"></td></tr>
+        <tr>
+            <td>اللاذقية </td>
+            <td>
+                <li>شقة مطلة على البحر مساحة 110 م</li>
+             
+            </td>
+            <td>1,600,000 ل.س</td>
+            <td><button style="display: block; margin: auto;" class="button" onclick="changedata(9)">إظهار</button>
+                <div id="button_9">
+                    <li>شقة ثلاث غرف مطلة على البحر </li>
+                    <li>بلكون مساحة 15 متر </li>
+                    <li>شقة مفروشة </li>
+                    <li>الطابق الثاني </li>
+                    <img src="imges/l1.jpg">
+                    <img src="imges/l2.jpg">
+                    <img src="imges/l3.jpg">
+                </div></td> 
+                <td><input type="radio" value="المحافظة: اللاذقية
+                    شقة مطلة على البحر مساحة 110 متر
+                    الإيجار الشهري: 1,600,000 ل.س 
+                    شقة ثلاث غرف مطلة على البحر
+                    بلكون مساحة 15 متر 
+                    شقة مفروشة
+                    الطابق الثاني" name="radioo"></td>
+        </tr>
+    </tbody></table>
+   
+    <h2>نموذج الشراء</h2>
+    <form onsubmit="return processCheckout()">
+        <label for="fullName">الاسم الكامل:</label><br>
+        <input type="text" id="fullName" required="" name="fullName" pattern="[a-z]+"><br><br>
+        
+        <label for="nationalID">الرقم الوطني:</label><br>
+        <input type="text" id="nationalID" required="" name="nationalID" pattern="[01-02-03]" {11}=""><br><br>
+        
+        <label for="birthdate">تاريخ الولادة:</label><br>
+        <input type="text" id="birthdate" name="birthdate" required="" pattern="\d{1-30}-\d{1-12}-\d{2000-2024}" placeholder="dd-mm-yyyy"><br><br>
+        
+        <label for="mobileNumber">رقم الموبايل:</label><br>
+        <input type="text" id="mobileNumber" required="" name="mobileNumber" pattern="(09\d{8}|09\d{7})"><br><br>
+        
+        <label for="email">الإيميل:</label><br>
+        <input type="email" required="" id="email" name="email"><br><br>
+        <button class="button" onclick="checkout()">شراء</button>
+    </form><script>
+        
+        let cart = [];
+        let counter = 1;
+        function changedata(parameter){
+            if(parameter==0){
+            document.getElementById('button_0').classList.toggle('active');
+            }
+            else if(parameter==1){
+            document.getElementById('button_1').classList.toggle('active');
+            }   
+            else if(parameter==2){
+            document.getElementById('button_2').classList.toggle('active');
+            }
+            else if(parameter==3){
+            document.getElementById('button_3').classList.toggle('active');
+            }
+            else if(parameter==4){
+            document.getElementById('button_4').classList.toggle('active');
+            }
+            else if(parameter==5){
+            document.getElementById('button_5').classList.toggle('active');
+            }
+            else if(parameter==6){
+            document.getElementById('button_6').classList.toggle('active');
+            }
+            else if(parameter==7){
+            document.getElementById('button_7').classList.toggle('active');
+            }
+            else if(parameter==8){
+            document.getElementById('button_8').classList.toggle('active');
+            }
+            else{
+            document.getElementById('button_9').classList.toggle('active');
+            }
+}
+        function addToCart(num, name, price) {
+            let item = {
+                counter: counter++,
+                number: num,
+                name: name,
+                price: price,
+                quantity: 1,
+                total: price
+            };
+
+            cart.push(item);
+
+            updateCart();
+        }
+
+        function updateCart() {
+            let cartBody = document.getElementById('cartBody');
+            let total = 0;
+            cartBody.innerHTML = '';
+
+            cart.forEach((item) => {
+                let row = cartBody.insertRow();
+                row.insertCell(0).innerText = item.counter;
+                row.insertCell(1).innerText = item.name;
+                row.insertCell(2).innerText = item.price;
+                row.insertCell(3).innerText = item.quantity;
+
+                let totalCell = row.insertCell(4);
+                totalCell.innerText = item.total;
+
+                total += item.total;
+            });
+
+            document.getElementById('total').innerText = 'المجموع النهائي: ' + total + ' ل.س';
+        }
+        function clearCart() {
+            cart = [];
+            updateCart();
+        }
+       function checkout() {
+            var radioButtonGroup = document.getElementsByName("radioo");
+            
+            var fullName = document.getElementById("fullName").value;
+            var nationalID = document.getElementById("nationalID").value;
+            var birthdate = document.getElementById("birthdate").value;
+            var mobileNumber = document.getElementById("mobileNumber").value;
+            var email = document.getElementById("email").value;
+            var checkedRadio = Array.from(radioButtonGroup).find(
+               (radio) => radio.checked
+            );
+            alert("The Selected Row Was: " + checkedRadio.value + "\n" + "The national id is " + nationalID + "\n" + "The birthdate is " + birthdate + "\n" + "The mobile numer is: " + mobileNumber + "\n" + "The email is: " + email);
+            
+            alert('تم الدفع بنجاح!');
+       } 
+    </script>
+
+</body>
+</html>
